@@ -510,6 +510,19 @@ footer {
   margin-right: 100px;
 }
 
+.ratingboxes {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  padding: 8px;
+  background-color: var(--color-tag1);
+}
+
+.rating-color {
+  background-color: var(--bg-color);
+}
+
 /* Media Queries */
 @media (max-width: 1340px) {
   .phone_image {
