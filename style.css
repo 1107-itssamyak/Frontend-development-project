@@ -141,11 +141,17 @@ i {
 section {
   width: 60%;
   color: white;
-  margin: 70px 0 80px 0;
+  margin: 50px 0 60px 0;
   justify-content: space-between;
   box-shadow: 2px 2px 40px 0px rgba(0, 0, 0, 0.3) inset;
+  background: radial-gradient(38.2% 50% at 50% 50%, #2e3134 0%, #292b2e 100%);
   border-radius: 20px;
   padding: 40px;
+}
+
+.section1 {
+  background: transparent;
+  box-shadow: none;
 }
 
 .container1,
@@ -154,10 +160,6 @@ section {
   justify-content: center;
   flex: 0.5;
   margin: 0 10px;
-}
-
-.container1 {
-  position: relative;
 }
 
 .container1 div {
