@@ -1,0 +1,651 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --bg-color: #282828;
+  --color-tag1: #30fbef;
+  --color-tag2: #9c69e2;
+  --color-tag3: #212121;
+  --color-tag4: rgba(0, 0, 0, 0.25);
+}
+
+/* important classes for js to move images */
+.carousel1 {
+  transform: translateX(0%);
+}
+.carousel2 {
+  transform: translateX(-100%);
+}
+.carousel3 {
+  transform: translateX(-220%);
+}
+
+.carousel4 {
+  transform: translateX(0%);
+}
+.carousel5 {
+  transform: translateX(-110%);
+}
+
+/* Helper color classes */
+.tag1 {
+  color: var(--color-tag1);
+}
+
+.tag2 {
+  color: var(--color-tag2);
+}
+
+.white {
+  color: white !important;
+  box-shadow: -3px -3px 8px 0px rgba(75, 93, 104, 0.1),
+    4px 3px 8px 0px var(--color-tag4);
+}
+
+/* Helper classes */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.template_links {
+  box-shadow: -3px -3px 8px 0px rgba(75, 93, 104, 0.1),
+    4px 3px 8px 0px var(--color-tag4);
+  border-radius: 50px;
+  padding-inline: 15px;
+  text-decoration: none;
+  color: var(--color-tag1);
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #e0e0e0;
+}
+
+/* Body  */
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  font-family: Ubuntu, sans-serif;
+}
+
+/* Header */
+.headerIcon {
+  color: var(--color-tag1);
+  flex-direction: row;
+}
+
+.headerIcon img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.headerIcon h1 {
+  font-size: 2rem;
+  padding: 0 15px;
+}
+
+nav {
+  width: 90%;
+  margin: 1rem;
+  transition: all 0.5s ease;
+}
+
+#navbar-btn {
+  color: white;
+  width: 45px;
+  text-align: center;
+}
+
+#navbar-btn:focus {
+  color: white;
+  box-shadow: none;
+}
+
+nav ul {
+  flex-direction: row;
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding-inline: 15px;
+}
+
+nav ul li a {
+  color: white !important;
+  text-decoration: none;
+}
+
+i {
+  padding-inline: 10px;
+}
+
+section {
+  width: 60%;
+  color: white;
+  margin: 70px 0 80px 0;
+  justify-content: space-between;
+  box-shadow: 2px 2px 40px 0px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.container1,
+.container2 {
+  max-width: 50%;
+  justify-content: center;
+  flex: 0.5;
+  margin: 0 10px;
+}
+
+.container1 {
+  position: relative;
+}
+
+.container1 div {
+  font-size: 2.5rem;
+  color: var(--color-tag1);
+  margin: 15px 0;
+  font-weight: bolder;
+  letter-spacing: 0.75px;
+}
+
+.container1 p {
+  height: 150px;
+  margin: 15px 0;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.container1 a {
+  padding: 10px 2rem;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container2 img {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Image carousel css  */
+.carousel-div {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: radial-gradient(38.2% 50% at 50% 50%, #2e3134 0%, #292b2e 100%);
+}
+
+.carousel-div div:first-child {
+  width: 100%;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.carousel {
+  height: 550px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.carousel-div1 {
+  height: 350px;
+  width: 500px;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  align-items: center;
+}
+
+.card1 {
+  min-width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  margin: 0 100px;
+  background-color: var(--color-tag3);
+}
+
+.card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  min-width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  margin: 0 100px;
+  padding-left: 30px;
+  background-color: var(--color-tag3);
+}
+
+.card2 p {
+  white-space: normal;
+  min-height: 100px;
+  min-width: 90%;
+  margin: 15px;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-tag1);
+}
+
+.subtitle {
+  color: var(--color-tag2);
+  margin-left: 10px;
+}
+
+.card1 p {
+  white-space: normal;
+  min-height: 200px;
+  width: 90%;
+  margin: 15px 20px;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+.card2 img {
+  width: 100px;
+}
+
+.card1-item1 img {
+  width: 150px;
+}
+
+.card1-item2 {
+  font-size: 1.5rem;
+  color: var(--color-tag1);
+  margin: 15px 0;
+  font-weight: bolder;
+  letter-spacing: 0.75px;
+  margin-left: 20px;
+}
+
+.card1 a {
+  padding: 10px 30px;
+  margin-left: 20px;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.button-container div:first-child {
+  justify-content: flex-start;
+}
+
+.button-container div:first-child button {
+  border: 0;
+  border-radius: 50%;
+  background-color: var(--color-tag1);
+  color: var(--color-tag1);
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  margin-inline: 5px;
+}
+
+.button-container div:first-child button:first-child {
+  background-color: var(--color-tag2);
+  color: var(--color-tag2);
+  height: 20px;
+  width: 20px;
+}
+
+.button-container div:last-child button {
+  color: var(--color-tag1);
+  background-color: transparent;
+  border: 0;
+  margin-inline: 5px;
+}
+
+.button-container button:active {
+  transform: scale(1.03);
+}
+
+/* phone image */
+.phone_image {
+  position: absolute;
+  min-width: 500px;
+  left: 50%;
+}
+
+/* div before the footer css */
+.beforefooter {
+  width: 80%;
+  margin: 50px 0;
+  box-shadow: none;
+  padding: 20px;
+  display: flex;
+  white-space: nowrap;
+}
+
+.beforefooter div {
+  margin: 10px 0;
+}
+
+.container3 {
+  width: 80%;
+  justify-content: flex-end;
+  letter-spacing: 1px;
+}
+
+.heading {
+  font-size: 2rem;
+  color: var(--color-tag1);
+  font-weight: bold;
+}
+
+.container3 input {
+  width: 500px;
+  height: 50px;
+  border-radius: 30px;
+  padding-inline: 15px;
+  border: 1px solid rgba(39, 40, 41, 1);
+  background: radial-gradient(38.2% 50% at 50% 50%, #2e3134 0%, #292b2e 100%);
+  box-shadow: 2px 2px 25px 0px rgba(0, 0, 0, 0.3) inset;
+  font-weight: bold;
+  font-family: inherit;
+  color: white;
+  border: 0;
+  position: relative;
+}
+
+.container3 input:focus {
+  outline: 0;
+}
+
+.beforefooter div:first-child {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.btn {
+  position: absolute;
+  box-shadow: -3px -3px 8px 0px rgba(75, 93, 104, 0.1),
+    4px 3px 8px 0px var(--color-tag4);
+  background: var(--bg-color);
+  border-radius: 40px;
+  border: 0;
+  width: 100px;
+  height: 35px;
+  margin-right: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn:focus,
+.btn:active {
+  color: white;
+  box-shadow: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn2 {
+  background-color: var(--color-tag3);
+  box-shadow: -3px -3px 8px 0px rgba(75, 93, 104, 0.1),
+    4px 3px 8px 0px var(--color-tag4);
+  border: 0;
+  padding: 10px 30px;
+  border-radius: 40px;
+  width: 200px;
+  margin-inline: 20px;
+}
+
+footer {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat (3, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  margin: 50px 0;
+}
+
+.item1 div:first-child {
+  font-size: large;
+  font-weight: 400;
+}
+
+.item-box1 .headerIcon {
+  margin-bottom: 30px;
+  justify-content: flex-start;
+}
+
+.item-box1 p {
+  margin: 10px 0;
+}
+
+.item1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item1 ul li {
+  margin: 10px 0;
+}
+
+.item1 ul li a {
+  color: var(--color-tag1);
+  text-decoration: none;
+}
+
+.social-list {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.social-list li {
+  height: 50px;
+  width: 50px;
+}
+
+.social-list a {
+  color: var(--color-tag1);
+  text-decoration: none;
+}
+
+.social-list a,
+.fa-comment-dots {
+  color: white;
+  box-shadow: -3px -3px 8px 0px rgba(75, 93, 104, 0.1),
+    4px 3px 8px 0px rgba(0, 0, 0, 0.25);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 20px;
+}
+
+.last-div {
+  width: 80%;
+  display: flex;
+  margin: 10px 0;
+  margin-bottom: 100px;
+  box-shadow: none;
+  justify-content: space-between;
+}
+
+.last-div div a {
+  text-decoration: none;
+}
+
+.last-div div:last-child {
+  margin-right: 100px;
+}
+
+/* Media Queries */
+@media (max-width: 1340px) {
+  .phone_image {
+    left: 45%;
+  }
+
+  .btn {
+    left: 77%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container1 div {
+    font-size: 2rem;
+  }
+
+  .container1 p {
+    min-height: 300px;
+  }
+
+  .phone_image {
+    min-width: 200px;
+    left: 40%;
+  }
+
+  .beforefooter {
+    flex-direction: column;
+  }
+
+  .beforefooter div:first-child {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card1 {
+    min-width: 400px;
+  }
+
+  .container3 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn {
+    left: 62%;
+  }
+
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+  }
+
+  .item-box2 {
+    margin-left: 50px;
+  }
+
+  .carousel5 {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 90%;
+    min-width: 300px;
+    flex-direction: column;
+  }
+
+  .container1,
+  .container2 {
+    min-width: 300px;
+  }
+
+  .container1 p {
+    min-height: 180px;
+  }
+
+  .container2 {
+    display: none;
+  }
+
+  .container1 div {
+    font-size: 2rem;
+  }
+
+  nav ul li {
+    padding: 0 15px;
+    margin: 10px 0;
+  }
+
+  .btn {
+    left: 65%;
+  }
+
+  .carousel {
+    width: 400px;
+  }
+
+  .card1 {
+    min-width: 300px;
+  }
+
+  .card2 img {
+    width: 50px;
+  }
+
+  .container3 {
+    flex-direction: column;
+  }
+
+  .container3 input {
+    width: 100%;
+  }
+
+  .btn2 {
+    margin: 10px 0;
+  }
+
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-flow: row;
+  }
+
+  .item-box2 {
+    margin-left: 0px;
+  }
+
+  .last-div {
+    flex-direction: row;
+  }
+
+  .carousel5 {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 420px) {
+  .btn {
+    left: 56%;
+  }
+}
